@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width-device-width, initial-scale-1.0">
+    <title>Q&Q Wristwatch</title>
+    <!--<link rel="stylesheet" href="style.css">-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+        integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+
+
+    <style>
+        .holder {
+            max-width: 1000vh;
+            height: 100vh;
+            margin: 0px;
+            background-size: contain;
+            /* background-image: linear-gradient(to top right, rgba(135,206,235), rgba(255,255,255)); */
+            /* background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1)); */
+        }
+
+        .topnav {
+            /* background-color: rgb(116, 205, 240); */
+            background-color: #4286f4;
+            overflow: hidden;
+            position: fixed;
+            /* Set the navbar to fixed position */
+            top: 0;
+            /* Position the navbar at the top of the page */
+            width: 100%;
+        }
+
+
+        /* Style the links inside the navigation bar */
+        .topnav a {
+            float: left;
+            /* color:darkslategray; */
+            color: #f2f2f2;
+            text-align: center;
+            padding: 15px 17px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        /* Change the color of links on hover */
+        .topnav a:hover {
+            color: black;
+            /* color: black; */
+            /* background-color: rgb(162, 170, 245); */
+            background-color: rgba(173, 216, 230);
+            /* border-bottom: solid 2px red; */
+        }
+
+        /* Add a color to the active/current link */
+        .topnav a.active {
+            /* background-color: #04AA6D; */
+
+            color: white;
+            /* border-bottom: solid 2px red; */
+        }
+
+        .topnav a.split {
+            float: right;
+            /* color: #f2f2f2; */
+            text-align: center;
+            padding: 15px 17px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        /* Top Navigation Bar Ends */
+
+        /* SIGN UP FORM DISPLAY STARTS */
+        /* html,  */
+        body {
+            /* margin: 20vh; */
+            display: flex;
+            /* justify-content: center; */
+            /* font-family: Roboto, Arial, sans-serif;
+            font-size: 15px; */
+            /* background-image: linear-gradient(to top right, rgba(135,206,235), rgba(255,255,255)); */
+            /* background-color: rgba(135,206,235); */
+            background-color: rgba(173, 216, 230);
+        }
+
+        .description {
+            text-align: center;
+            color: black;
+            /* color: darkblue; */
+            /* color: white; */
+            margin: 50px;
+            padding: 1px 0;
+            font-family: Roboto, Arial, sans-serif;
+            background-color: whitesmoke transparent;
+            width: 100%;
+            border-radius: 100px;
+        }
+
+        .container .forgotpass{
+            border-radius: 100px;
+        }
+
+        .watch{
+            height: 150px;
+            width:200px;
+            /* border: solid #4286f4; */
+            border: solid white;
+            border-radius: 100px;
+        }
+
+        form {
+            font-family: Roboto, Arial, sans-serif;
+            font-size: 15px;
+            justify-content: center;
+            border: 2px solid #f1f1f1;
+            /* border: 2px solid #4286f4; */
+            border-radius: 80px;
+            margin-top: 200px;
+            position: absolute;
+            right: 300px;
+        }
+
+        .holder {
+            position: absolute;
+            right: 150px;
+            /* margin-top: 60px; */
+        }
+
+        input[type=text],
+        input[type=password] {
+            width: 100%;
+            padding: 16px 8px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            border-radius: 100px;
+        }
+
+        .icon {
+            font-size: 110px;
+            display: flex;
+            justify-content: center;
+            color: #4286f4;
+        }
+
+        button {
+            background-color: #4286f4;
+            color: white;
+            padding: 14px 0;
+            margin: 10px 0;
+            border: none;
+            cursor: grab;
+            /* width: 48%; */
+            width: 20%;
+            border-radius: 100px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 18px;
+        }
+
+        button:hover {
+            /* background-color: black; */
+            /* background-color: rgba(173,216,230); */
+            background-color: white;
+            color: black;
+        }
+
+        .formcontainer {
+            text-align: center;
+            margin: 24px 50px 12px;
+        }
+
+        .container {
+            padding: 16px 0;
+            text-align: left;
+            border-radius: 100px;
+        }
+
+        span.psw {
+            float: right;
+            padding-top: 0;
+            padding-right: 15px;
+        }
+
+        /* The message box is shown when the user clicks on the password field */
+        #message {
+            display: none;
+            /* background: #f1f1f1; */
+            /* background: transparent; */
+            /* background: #4286f4; */
+            background-color: rgba(173, 216, 230), transparent;
+            /* background: rgba(173, 216, 230); */
+            /* color: #000; */
+            /* color: white; */
+            color: black;
+            position: relative;
+            padding: 15px;
+            margin-top: 50px;
+            margin-bottom: auto;
+        }
+
+        #message p {
+            padding: 10px 35px;
+            font-size: 18px;
+        }
+
+        /* The message box is shown when theuser clicks on the password field Ends */
+        /* Add a green text color and a checkmark when the requirements are right */
+        .valid {
+            color: green;
+        }
+
+        .valid:before {
+            position: relative;
+            left: -35px;
+            content: "✔";
+        }
+
+        /* Add a red text color and an "x" when the requirements are wrong */
+        .invalid {
+            color: red;
+        }
+
+        .invalid:before {
+            position: relative;
+            left: -35px;
+            content: "✖";
+        }
+
+
+
+        /* Change styles for span on extra small screens */
+        @media (min-width: 900px) {}
+
+        @media (max-width: 500px) {}
+
+        @media screen and (max-width: 300px) {
+            span.psw {
+                display: block;
+                float: none;
+            }
+        }
+
+        @media (orientation: landscape) {
+
+        }
+
+        /* SIGN UP FORM DISPLAY ENDS */
+    </style>
+
+</head>
+
+<body>
+    <!-- Navigation Bar Section  Starts-->
+    <div class="topnav">
+        <a class="active" href="#home">Home</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+
+        <!-- <div class="topnav-right"> -->
+        <a href="#help" class="split">Help</a>
+        <a href="#sponsors" class="split">Sponsors</a>
+        <a href="#features" class="split">Features</a>
+        <!-- </div> -->
+    </div>
+
+    <!--Navigation Bar Section Ends-->
+
+    <div class="container">
+        <div class="description ">
+            <P>New arrivals!</P>
+            <p>50% off every wholesale for the next 2 months!!</p>
+            <p>Sign up to enjoy this offer.</p>
+            <img src="Q&Q.jpg" class="watch">
+            <p>Q&Q Quartz</p>
+            <p>IPBLK</p>
+            <p>Water Resist</p>
+            <p>5 Bar</p>
+        </div>
+    </div>
+    <!--SIGN UP FORM DISPLAY CODES STARTS-->
+
+    <!-- <form action="/action_page.php"> -->
+    <form method="*">
+        <h1>SIGN UP</h1>
+        <div class="icon">
+            <i class="fas fa-user-circle"></i>
+        </div>
+        <div class="formcontainer">
+            <div class="container">
+                <label for="uname"><strong>Username</strong></label>
+                <input type="text" placeholder="Enter Username" id="uname" name="uname" required>
+                <label for="mail"><strong>E-mail</strong></label>
+                <input type="text" placeholder="Enter E-mail" id="mail" name="mail" required>
+                <label for="psw"><strong>Password</strong></label>
+                <input type="password" placeholder="Enter Password" id="psw" name="psw"
+                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                    title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+                    required>
+            </div>
+            <button type="submit"><strong>SIGN UP</strong></button>
+            <button type="reset"><strong>RESET</strong></button>
+            <!-- </div> -->
+            <div class="container" style="background-color: #eee">
+                
+                <label style="padding-left: 15px">
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+                <span class="psw"><a href="#">Forgot password?</a></span>
+                
+            </div>
+        </div>
+    </form>
+    <script>alert("Form submitted successfully")</script>
+
+    <!--SIGN UP FORM DISPLAY CODES ENDS-->
+
+    <!-- The message box displays the Password Requirement Starts-->
+    <div id="message">
+        <h3>Password must contain the following:</h3>
+        <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+        <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+        <p id="number" class="invalid">A <b>number</b></p>
+        <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+        <p>Press the reset button to clear!</p>
+    </div>
+    <!-- The message box displays the Password Requirement Ends -->
+
+    <!-- JavaScript to Validates Password Entry Starts-->
+
+    <script>
+        var myInput = document.getElementById("psw");
+        var letter = document.getElementById("letter");
+        var capital = document.getElementById("capital");
+        var number = document.getElementById("number");
+        var length = document.getElementById("length");
+
+        // When the user clicks on the password field, show the message box
+
+        myInput.onfocus = function () {
+            document.getElementById("message").style.display = "block";
+        }
+
+        // When the user clicks outside of the password field, hide the message box
+        myInput.onblur = function () {
+            document.getElementById("message").style.display = "none";
+        }
+
+        // When the user starts to type something inside the password field
+        myInput.onkeyup = function () {
+
+            // Validate lowercase letters
+            var lowerCaseLetters = /[a-z]/g;
+            if (myInput.value.match(lowerCaseLetters)) {
+                letter.classList.remove("invalid");
+                letter.classList.add("valid");
+            } else {
+                letter.classList.remove("valid");
+                letter.classList.add("invalid");
+            }
+
+            // Validate capital letters
+            var upperCaseLetters = /[A-Z]/g;
+            if (myInput.value.match(upperCaseLetters)) {
+                capital.classList.remove("invalid");
+                capital.classList.add("valid");
+            } else {
+                capital.classList.remove("valid");
+                capital.classList.add("invalid");
+            }
+
+            // Validate numbers
+            var numbers = /[0-9]/g;
+            if (myInput.value.match(numbers)) {
+                number.classList.remove("invalid");
+                number.classList.add("valid");
+            } else {
+                number.classList.remove("valid");
+                number.classList.add("invalid");
+            }
+
+            // Validate length
+            if (myInput.value.length >= 8) {
+                length.classList.remove("invalid");
+                length.classList.add("valid");
+            } else {
+                length.classList.remove("valid");
+                length.classList.add("invalid");
+            }
+        }
+    </script>
+
+    </div>
+    <!-- JavaScript to Validates Password Entry Ends-->
+
+
+</body>
+
+</html>
