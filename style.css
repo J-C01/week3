@@ -1,0 +1,391 @@
+<style>
+        :root {
+            color: black;
+        }
+
+        * {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+            text-decoration: none;
+            transform: all .2s linear;
+            /* text-transform: capitalize; */
+        }
+
+        ::selection {
+            background: var(--blue);
+            color: #fff;
+        }
+
+        html {
+            font-size: 62.5%;
+            overflow-x: hidden;
+        }
+
+        /* BODY BACKGROUND IMAGE CSS STYLE STARTS */
+        body {
+            overflow-x: hidden;
+            background-image: url(https://lh3.googleusercontent.com/vvm00GimaLqpsW4zeODWAbrpApsUfm8t7XVOvW4ZMShdEjRa5dx3ZzQzXcbg7jMa6Fo2X63naBVvcXhuj3etkPO78ZHbA21oQfVc2xuWRo2A7wlKaE4=w2400-rj);
+        }
+
+        /* BODY BACKGROUND IMAGE CSS STYLE ENDS */
+
+        /* NAVIGATION MENU CSS STYLE STARTS */
+        .topnav {
+            background-color: #03a57498;
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        /* Style the links inside the navigation bar */
+        .topnav a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 15px 17px;
+            text-decoration: none;
+            font-size: 30px;
+        }
+
+        /* Change the color of links on hover */
+        .topnav a:hover {
+            color: black;
+            background-color: #FFE1D6;
+        }
+
+        /* Add a color to the active/current link */
+        .topnav a.active {
+            background-color: #ffe6e8;
+            color: black;
+        }
+
+        /* Split the topnav menu into two part afar of */
+        .topnav a.split {
+            float: right;
+            text-align: center;
+            padding: 15px 17px;
+            text-decoration: none;
+            font-size: 30px;
+        }
+
+        /* NAVIGATION MENU CSS STYLE ENDS */
+
+        /* HEADER SECTION FORMATTING STARTS */
+        header {
+            margin-top: 100px;
+        }
+
+        header .logo {
+            margin-left: 50px;
+            color: black;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: lighter;
+        }
+
+        /* HEADER SECTION FORMATTING ENDS */
+
+        /* BODY CSS STYLE STARTS */
+        /* Main Welcome Message content Starts */
+        .welcome-intro {
+            display: block;
+            font-size: 30px;
+            padding-top: 10rem;
+            color: black;
+            width: 100%;
+            margin-top: 5rem;
+            margin-left: 0vh;
+            box-sizing: border-box;
+            text-align: justify;
+        }
+
+        .welcome-intro p {
+            font-size: 25px;
+            display: block;
+        }
+
+        /* Main Welcome Message content Starts */
+
+        /* HOME VARIETY COMES STARTS */
+        .home-variety .choice {
+            text-align: center;
+        }
+
+        .home-variety img {
+            margin-left: 20px;
+            margin-top: 5px;
+            border: solid 2px white;
+        }
+
+        /* HOME VARIETY COMES ENDS */
+
+        /* FORM DISPLAY APPEARANCE STARTS */
+        /* Form Position starts */
+        #contactus {
+            margin-top: 100px;
+            padding-top: 10px;
+            min-height: 100rem;
+            margin-left: 100px;
+        }
+
+        /* Form Position Ends */
+
+        /* Form Title "Contact Us" Position Starts */
+        .formbody {
+            float: left;
+        }
+
+        /* Form Title "Contact Us" Position Ends */
+
+        /* Sign-up Form Appearance Control Starts */
+        .signup-form {
+            width: 320px;
+            padding: 20px;
+            border: 2px solid #21d19c;
+            margin-top: auto;
+            margin-bottom: 10vh;
+            float: left;
+            border-radius: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Sign-up Form Appearance Control Ends */
+
+        /* Sign up Icon Starts */
+        .icon {
+            font-size: 110px;
+            display: flex;
+            justify-content: center;
+            color: #21d19c;
+        }
+
+        /* Sign up icon Ends */
+
+        /* Form Title format starts */
+        .titleh3 {
+            font-size: 30px;
+            text-align: center;
+        }
+
+        /* Form Title format ends */
+
+        /* Form paragraph format starts */
+        .signup-form p {
+            font-size: 20px;
+            font-family: ;
+            font-weight: bolder;
+            margin: 10px 0;
+            color: black;
+            line-height: var(wrapper)
+        }
+
+        /* Form paragraph format ends */
+
+        /* Username, E-mail, Password and Message box format starts */
+        #uname {
+            width: 100%;
+            height: 3vh;
+            border-radius: 10px;
+        }
+
+        #mail {
+            width: 100%;
+            height: 3vh;
+            border-radius: 10px;
+        }
+
+        #psw {
+            width: 100%;
+            height: 3vh;
+            border-radius: 10px;
+        }
+
+        #message {
+            width: 100%;
+            height: 10vh;
+            border-radius: 10px;
+        }
+
+        /* Username, E-mail, Password and Message box format ends */
+
+        /* Form Submit and Reset button format starts */
+        .signup-form button {
+            width: 30%;
+            margin-left: 0px;
+            padding: 10px;
+            font-size: large;
+            font-weight: bold;
+            border: 2px solid;
+            color: white;
+            background-color: #21d19c;
+            cursor: pointer;
+            border-radius: 60px;
+        }
+
+        .signup-form button:hover {
+            background-color: whitesmoke;
+            color: black;
+        }
+
+        /* Form Submit and Reset button format ends */
+
+        /* FORM DISPLAY APPEARANCE STARTS */
+
+        /* FOOTER SECTION STARTS */
+        .footer {
+            float: left;
+            background:#FFE1D6 ;
+            /* background: white; */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+            text-decoration: none;
+            transition: all .2s linear;
+        }
+
+        .footer .box-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .footer .box-container .box {
+            flex: 1 1 30rem;
+            margin: 2rem;
+        }
+
+        .footer .box-container .box h3 {
+            font-size: 1.5rem;
+            color: var(--blue);
+        }
+
+        .footer .box-container .box p {
+            font-size: 1.5rem;
+            color: #333;
+            padding: 1rem 0;
+        }
+
+        .footer .box-container .box p i {
+            font-size: 1.5rem;
+            /* color: var(--blue); */
+        }
+
+        .footer .box-container .box a {
+            font-size: 1.5rem;
+            display: block;
+            color: #333;
+            padding: 0.5rem 0;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .nocap {
+            text-transform: none;
+        }
+
+        /* FOOTER SECTION ENDS */
+
+        /* MEDIA QUERY DISPLAY STARTS */
+        @media (max-width:768px) {
+            html {
+                font-size: 55%;
+            }
+
+            header .topnav {
+                position: fixed;
+                top: -120;
+                left: 0;
+                width: 100%;
+                background: white;
+                opacity: 0;
+            }
+
+            header .topnav a {
+                font-size: 2.5rem;
+                color: black;
+                display: block;
+                margin: 1rem 0;
+            }
+
+            header .topnav a::before {
+                background-color: #03a57498;
+            }
+
+            .welcome-intro h3,
+            p {
+                text-align: center;
+            }
+
+            .footer .box-container {
+                float: left;
+            }
+
+            .footer .box-container .box h3 {
+                justify-content: center;
+            }
+
+            .signup-form button:hover {
+                background-color: whitesmoke;
+                color: black;
+            }
+            .topnav a {
+                font-size: 50px;
+            }
+        }
+
+        @media(max-width: 500px) {
+            html {
+                font-size: 50%;
+            }
+
+            header .topnav {
+                position: fixed;
+                top: -120;
+                left: 0;
+                width: 100%;
+                background: white;
+                opacity: 0;
+            }
+
+            header .topnav a {
+                font-size: 2.5rem;
+                color: black;
+                display: block;
+                margin: 1rem 0;
+            }
+
+            header .topnav a::before {
+                background-color: #03a57498;
+            }
+
+            .welcome-intro h3,
+            p {
+                text-align: center;
+            }
+
+            .footer .box-container {
+                float: left;
+            }
+
+            .footer .box-container .box h3 {
+                justify-content: center;
+            }
+
+            .signup-form button:hover {
+                background-color: whitesmoke;
+                color: black;
+            }
+        }
+
+        /* MEDIA QUERY DISPLAY ENDS */
+
+        /* BODY CSS STYLE ENDS */
+    </style>
