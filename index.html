@@ -3,7 +3,7 @@
 
 <head>
     <title>Adbond Agro-Homes</title>
-    <meta name="viewport" content="width-device-width, initial-scale-1.0">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
@@ -16,10 +16,12 @@
 <body>
     <!-- NAVIGATION MENU SECTION STARTS -->
     <header>
-        <a href="#" class="logo"><i class="fa fa-home" style="font-size:70px;color:rgba(13, 197, 151, 0.514)"> </i></a>
-        <a href="#" style="font-size: 20px; color: black;">Adbond Harvest and Homes</a>
-        <nav class="topnav" id="topnav">
-            <div>
+        <div id="logo">
+            <a href="#" class="logo"><i class="fa fa-home" style="font-size:70px;color:rgba(13, 197, 151, 0.514)"> </i></a>
+            <a href="#" style="font-size: 20px; color: black;">Adbond Harvest and Homes</a>
+        </div>
+        <nav class="topnav">
+            <div id="topnav">
                 <a class="active" href="#home">Home</a>
                 <a href="#news">News</a>
                 <a href="#contactus">Contact</a>
@@ -48,7 +50,8 @@
                 style="margin-bottom: 20px; opacity: 1; transform: none; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: lighter; font-size: 60px;">
                 We keep your home style according to your Taste</h4>
         </div>
-        <div class="house-choice" style="display: ;">
+        <div class="house-choice" >
+            <!-- style="display: ;" -->
             <img src="p1.jpg" style="border-radius: 50px;" width="400px" height="300px"><img src="p2.jpg"
                 style="border-radius: 50px;" width="400px" height="300px"><img src="p3.jpeg"
                 style="border-radius: 50px;" width="400px" height="300px">
@@ -75,7 +78,7 @@
                     </div>
                     <p>Username</strong></p>
                     <input type="text" placeholder="" id="uname" name="uname" required>
-                    <p>E-mail</p>
+                    <p>E-mail</p>  
                     <input type="text" placeholder="" id="mail" name="mail" required>
                     <p>Password</p>
                     <input type="psw" id="psw" name="password" required>
@@ -126,7 +129,6 @@
         }
     </script>
     <!-- JAVASCRIPT TO PROCESS THE INPUT FROM THE FORM ENDS -->
-
     </section>
     <!-- BODY SECTION ENDS -->
 </body>
