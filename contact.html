@@ -10,23 +10,21 @@
         integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    
 </head>
 
 <body>
     <!-- NAVIGATION MENU SECTION STARTS -->
     <header>
         <div id="logo">
-            <a href="#" class="logo"><i class="fa fa-home" style="font-size:100px;color:hsl(165.081, 89%, 41%)">
-                </i></a>
-            <!-- rgba(13, 197, 151, 0.514) -->
+            <a href="#" class="logo"><i class="fa fa-home" style="font-size:100px;color:hsl(165.081, 89%, 41%)"> </i></a>
             <a href="#" style="font-size: 20px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: black;">Adbond Harvest and Homes</a>
         </div>
         <nav class="topnav">
             <div id="topnav">
-                <a class="active" href="index.html">Home</a>
+                <a href="index.html">Home</a>
                 <a href="news.html">News</a>
-                <a href="contact.html">Contact</a>
+                <a class="active" href="contact.html">Contact</a>
                 <a href="about.html">About</a>
                 <a href="faq.html" class="split">FAQs</a>
                 <a href="partners.html" class="split">Partners</a>
@@ -42,33 +40,43 @@
             Welcome to Adbond Harvest and Homes</h3>
         <p class="intro"
             style="margin-bottom: 20px; text-align: center; font-weight: lighter; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; ">
-            We are an
-            “agro-to-home” development company. We help you secure a future space you can call home.</p>
-    </section>
-
-    <section class="home-variety" id="features" style="padding-top: 100px;">
-        <div class="choice">
-            <h4
-                style="margin-bottom: 20px; opacity: 1; transform: none; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: lighter; font-size: 55px;">
-                We keep your home style according to your Taste</h4>
-        </div>
-        <div class="house-choice">
-            <!-- style="display: ;" -->
-            <img src="h1.jpg" style="border-radius: 50px;" width="400px" height="300px"><img src="h2.jpg"
-                style="border-radius: 50px;" width="400px" height="300px"><img src="h3.jpeg"
-                style="border-radius: 50px;" width="400px" height="300px">
-            <img src="h4.jpg" style="border-radius: 50px;" width="400px" height="300px"><img src="h6.jpg"
-                style="border-radius: 50px;" width="400px" height="300px"><img src="h8.jpg" style="border-radius: 50px;"
-                width="400px" height="300px">
-            <img src="h9.jpg" style="border-radius: 50px;" width="400px" height="300px"><img src="h10.jpg"
-                style="border-radius: 50px;" width="400px" height="300px">
-        </div>
+            For more information or you feel like reaching out to us, do use the contact form below.</p>
+            <p class="intro"
+            style="margin-bottom: 20px; text-align: center; font-weight: lighter; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; "> Thank you for visiting Adbond Harvest and Homes.</p>
     </section>
 
     <!-- BODY SECTION STARTS -->
-    <section id="contactus" style="padding-top: 100px; text-align: center;">
-        <h3 style="text-align: center; opacity: 1; transform: none; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: lighter; font-size: 60px;"><a href="contact.html" style="text-decoration: none; color: black;">Contact Us</a></h3>
-        
+    <section id="contactus" style="padding-top: 100px;">
+        <div class="formbody">
+            <h3
+                style="text-align: center; padding-left: 40px; font-size: xx-large; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; ">
+                Contact Us</h3>
+            <div class="signup-form">
+                <!-- FORM STARTS HERE -->
+                <form action="" method="post" onsubmit="return validateForm()">
+                    <h3 class="titleh3">Sign Up</h3>
+                    <div class="icon">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <p>Username</strong></p>
+                    <input type="text" placeholder="" id="uname" name="uname" required>
+                    <p>E-mail</p>  
+                    <input type="text" placeholder="" id="mail" name="mail" required>
+                    <p>Password</p>
+                    <input type="psw" id="psw" name="password" required>
+                    <p>Message</p>
+                    <textarea id="message" name="message" required></textarea>
+                    <P><button type="submit" value="Submit">Submit</button> <button type="reset"
+                            value="Reset">Reset</button></P>
+                </form>
+                <!-- FORM ENDS HERE -->
+            </div>
+        </div>
+        <!-- <div style="margin-left: 40px;  flex-wrap: wrap; padding: left 40px;">
+            <aside style="inherits:true">
+            <img src="t1.jpg" width="500" height="500">
+         </aside>
+        </div> -->
     </section>
     <section class="footer" id="footer">
         <div class="box-container">
@@ -108,7 +116,7 @@
         }
     </script>
     <!-- JAVASCRIPT TO PROCESS THE INPUT FROM THE FORM ENDS -->
-    <!-- </section> -->
+    </section>
     <!-- BODY SECTION ENDS -->
 </body>
 

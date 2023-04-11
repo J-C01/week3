@@ -1,24 +1,186 @@
 <style>
-/* :root {
-            color: black;
-        } */
 
-/* * {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            outline: none;
-            text-decoration: none;
-            transform: all .2s linear;
-            text-transform: capitalize;
-        } */
+:root {
+    --bs-blue: #0d6efd;
+    --bs-indigo: #6610f2;
+    --bs-purple: #6f42c1;
+    --bs-pink: #d63384;
+    --bs-red: #dc3545;
+    --bs-orange: #fd7e14;
+    --bs-yellow: #ffc107;
+    --bs-green: #198754;
+    --bs-teal: #20c997;
+    --bs-cyan: #0dcaf0;
+    --bs-white: #fff;
+    --bs-gray: #6c757d;
+    --bs-gray-dark: #343a40;
+    --bs-gray-100: #f8f9fa;
+    --bs-gray-200: #e9ecef;
+    --bs-gray-300: #dee2e6;
+    --bs-gray-400: #ced4da;
+    --bs-gray-500: #adb5bd;
+    --bs-gray-600: #6c757d;
+    --bs-gray-700: #495057;
+    --bs-gray-800: #343a40;
+    --bs-gray-900: #212529;
+    --bs-primary: #0d6efd;
+    --bs-secondary: #6c757d;
+    --bs-success: #198754;
+    --bs-info: #0dcaf0;
+    --bs-warning: #ffc107;
+    --bs-danger: #dc3545;
+    --bs-light: #f8f9fa;
+    --bs-dark: #212529;
+    --bs-primary-rgb: 13,110,253;
+    --bs-secondary-rgb: 108,117,125;
+    --bs-success-rgb: 25,135,84;
+    --bs-info-rgb: 13,202,240;
+    --bs-warning-rgb: 255,193,7;
+    --bs-danger-rgb: 220,53,69;
+    --bs-light-rgb: 248,249,250;
+    --bs-dark-rgb: 33,37,41;
+    --bs-white-rgb: 255,255,255;
+    --bs-black-rgb: 0,0,0;
+    --bs-body-color-rgb: 33,37,41;
+    --bs-body-bg-rgb: 255,255,255;
+    --bs-font-sans-serif: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    --bs-font-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+    --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+    --bs-body-font-family: var(--bs-font-sans-serif);
+    --bs-body-font-size: 1rem;
+    --bs-body-font-weight: 400;
+    --bs-body-line-height: 1.5;
+    --bs-body-color: #212529;
+    --bs-body-bg: #fff;
+}
 
-* {
+*, ::after, ::before {
     box-sizing: border-box;
 }
 
+div {
+    display: block;
+}
+
+.row{
+    /* background-color: #f2f2f2; */
+    --bs-gutter-x:1.5rem;
+    --bs-gutter-y:0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-.5 & var(--bs-gutter-x));
+    margin-left: calc(-.5 * var(--bs-gutter-x));
+}
+
+/* .row .teammember .h3 .h4{
+    font-size: 50px;
+    text-transform: uppercase;
+
+} */
+
+.row>* {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    margin-top: var(--bs-gutter-y);
+}
+
+.rounded-circle {
+    border-radius: 50%!important;
+}
+
+.mb-5{
+    margin-bottom: 3rem!important;
+}
+
+.img-fluid{
+    max-width: 100%;
+    height: auto;
+}
+
+.img,svg{
+    vertical-align: middle;
+}
+
+img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+    overflow-x: ;
+    overflow-y: ;
+}
+
+.teammember {
+    /* background: #fff; */
+    padding: 30px 16px;
+    /* box-shadow: 5px 5px 10px #333; */
+}
+.teammember h3, h4{
+    text-transform: uppercase;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.teammember i{
+    /* color: #ffe6e8; */
+    color: hsl(165.081, 89%, 41%);
+    font-size: 40px;
+    padding: 2px;
+}
+.fab, .far{
+    font-weight: 400;
+}
+
+.fab{
+    font-family: "font Awesome 5 Brands";
+}
+
+.fa,.fab,.fad,.fal,.far,.fas{
+    -webkit-font-smoothing:antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+}
+.fa-facebook-square:before{
+    content: "\fa082";
+}
+.fa-twitter-square:before{
+    content: "\fa081";
+}
+.fa-instagram:before{
+    content: "\f16d";
+}
+.fa-linkedin:before{
+    content: "\fa8c";
+}
+
+/* .teammember a{
+    font-size: 20px;
+} */
+
+.text-center{
+    text-align: center!important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    /* font-size: 30px; */
+}
 .house-choice::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+.land-choice::after {
     content: "";
     clear: both;
     display: table;
@@ -29,10 +191,6 @@
     padding: 15px;
 }
 
-/* ::selection {
-            background: var(--blue);
-            color: #fff;
-        } */
 
 html {
     font-size: 62.5%;
@@ -41,8 +199,11 @@ html {
 
 /* BODY BACKGROUND IMAGE CSS STYLE STARTS */
 body {
+    margin: 0;
     overflow-x: hidden;
     background-image: url(https://lh3.googleusercontent.com/vvm00GimaLqpsW4zeODWAbrpApsUfm8t7XVOvW4ZMShdEjRa5dx3ZzQzXcbg7jMa6Fo2X63naBVvcXhuj3etkPO78ZHbA21oQfVc2xuWRo2A7wlKaE4=w2400-rj);
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
 }
 
 /* BODY BACKGROUND IMAGE CSS STYLE ENDS */
@@ -53,12 +214,15 @@ body {
     justify-content: center;
     flex-wrap: wrap;
 
-    background-color: #03a57498;
+    background-color: hsl(165, 88%, 41%);
+    /* background-color: hsl(162, 96%, 33%); */
+    /* background-color: #03a574; */
     overflow: hidden;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* Style the links inside the navigation bar */
@@ -69,6 +233,7 @@ body {
     padding: 15px 17px;
     text-decoration: none;
     font-size: 30px;
+    text-transform: capitalize;
 }
 
 /* Change the color of links on hover */
@@ -93,6 +258,25 @@ body {
 }
 
 /* NAVIGATION MENU CSS STYLE ENDS */
+
+a{
+    /* text-decoration: underline; */
+}
+a:-webkit-any-link{
+    color: webkit-link;
+    cursor: pointer;
+    /* text-decoration: underline; */
+}
+a:hover{
+    color: burlywood;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    /* font-size: 30px; */
+}
 
 /* HEADER SECTION FORMATTING STARTS */
 header {
@@ -144,14 +328,163 @@ header .logo {
     border: solid 2px white;
 }
 
+
+.land-variety .choice {
+    text-align: center;
+}
+
+.land-variety img {
+    margin-left: 20px;
+    margin-top: 5px;
+    border: solid 2px white;
+    /* align-items: center; */
+}
+
 /* HOME VARIETY COMES ENDS */
+
+/* Team member Images Display Starts  */
+.our-team .team {
+    text-align: center;
+}
+
+/* .home-variety img {
+    margin-left: 20px;
+    margin-top: 5px;
+    border: solid 2px white;
+} */
+
+.team-member-image .team {
+    text-align: center;
+}
+
+.team-member-image img {
+    margin-left: 20px;
+    margin-top: 5px;
+    border: solid 2px white;
+    /* align-items: center; */
+}
+
+/* Team member Images Display Ends  */
+
+
+/* Sponsors Styling Starts */
+.our-partners .partners {
+    text-align: center;
+}
+.partners-member-image .partners {
+    text-align: center;
+}
+.partners-member-image img {
+    margin-left: 20px;
+    margin-top: 5px;
+    border: solid 2px white;
+    /* align-items: center; */
+}
+.partnermember {
+    /* background: #fff; */
+    padding: 30px 16px;
+    /* box-shadow: 5px 5px 10px #333; */
+}
+.partnermember h3, h4{
+    text-transform: uppercase;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.partnermember i{
+    /* color: #ffe6e8; */
+    color: hsl(165.081, 89%, 41%);
+    font-size: 40px;
+    padding: 2px;
+}
+
+/* Sponsors Styling Ends */
+
+/* FAQs TOUR FORM DISPLAY STARTS */
+.welcome-intro .box-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.welcome-intro .box-container .box {
+    flex: 1 1 30rem;
+    margin: 2rem;
+}
+
+.welcome-intro .box-container .box h3 {
+    font-size: 1.5rem;
+    color: var(--blue);
+}
+
+.welcome-intro .box-container .box p {
+    font-size: 1.5rem;
+    color: #333;
+    padding: 1rem 0;
+}
+
+.welcome-intro .box-container .box p i {
+    font-size: 1.5rem;
+    /* color: var(--blue); */
+}
+
+.welcome-intro .box-container .box a {
+    font-size: 1.5rem;
+    display: block;
+    color: #333;
+    padding: 0.5rem 0;
+}
+
+/* Social Media Platforms */
+.followus i{
+    /* color: #ffe6e8; */
+    /* display: inline; */
+    color: hsl(165.081, 89%, 41%);
+    font-size: 40px;
+    padding: 2px;
+    text-decoration: none;
+}
+
+.followus .box-container .box {
+    flex: 1 1 30rem;
+    margin: 2rem;
+}
+
+.followus .box-container .box h3 {
+    font-size: 1.5rem;
+    color: var(--blue);
+}
+
+.followus .box-container .box p {
+    font-size: 1.5rem;
+    /* color: #333; */
+    padding: 1rem 0;
+}
+
+.followus .box-container .box p i {
+    font-size: 1.5rem;
+    /* color: var(--blue); */
+}
+
+.followus .box-container .box a {
+    font-size: 1.5rem;
+    display: block;
+    color: #333;
+    padding: 0.5rem 0;
+}
+
+.followus a:hover {
+    /* text-decoration: underline; */
+}
+
+/* FAQs TOUR FORM DISPLAY STARTS */
 
 /* FORM DISPLAY APPEARANCE STARTS */
 /* Form Position starts */
 #contactus {
     margin-top: 100px;
     padding-top: 10px;
-    min-height: 100rem;
+    /* min-height: 100rem; */
+    min-height: 10rem;
     margin-left: 30px;
 }
 
@@ -482,6 +815,60 @@ header .logo {
     }
 }
 
+
+@media only screen and (max-width: 600px) {
+
+    /* For tablets: */
+    .col-s-1 {
+        width: 8.33%;
+    }
+
+    .col-s-2 {
+        width: 16.66%;
+    }
+
+    .col-s-3 {
+        width: 25%;
+    }
+
+    .col-s-4 {
+        width: 33.33%;
+    }
+
+    .col-s-5 {
+        width: 41.66%;
+    }
+
+    .col-s-6 {
+        width: 50%;
+    }
+
+    .col-s-7 {
+        width: 58.33%;
+    }
+
+    .col-s-8 {
+        width: 66.66%;
+    }
+
+    .col-s-9 {
+        width: 75%;
+    }
+
+    .col-s-10 {
+        width: 83.33%;
+    }
+
+    .col-s-11 {
+        width: 91.66%;
+    }
+
+    .col-s-12 {
+        width: 100%;
+    }
+
+}
+
 @media only screen and (min-width: 600px) {
 
     /* For tablets: */
@@ -536,6 +923,11 @@ header .logo {
 }
 
 @media only screen and (min-width:768px) {
+
+    .col-md-3 {
+        flex: 0 0 auto;
+        width: 25%;
+    }    
 
     /* For desktop: */
     .col-1 {
@@ -691,217 +1083,59 @@ header .logo {
     }
 }
 
-/*@media (max-width:600px) {
 
-            html {
-                font-size: 55%;
-            }
 
-            header .topnav {
-                position: fixed;
-                top: -120;
-                left: 0;
-                width: 100%;
-                background: white;
-                opacity: 0;
-            }
+@media only screen and (orientation: landscape) {
 
-            header .topnav a {
-                font-size: 2.5rem;
-                color: black;
-                display: block;
-                margin: 1rem 0;
-            }
+    /* For desktop: */
+    .col-1 {
+        width: 8.33%;
+    }
 
-            header .topnav a::before {
-                background-color: #03a57498;
-            }
+    .col-2 {
+        width: 16.66%;
+    }
 
-            .welcome-intro h3,
-            p {
-                text-align: center;
-            }
-            .signup-form {
-                width: 40rem;
-                padding: 20px;
-                border: 2px solid #21d19c;
-                margin-top: auto;
-                margin-bottom: 10vh;
-                float: left;
-                border-radius: 20px;
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            }
-            .signup-form button {
-                width: 30%;
-                margin-left: 0px;
-                padding: 10px;
-                font-size: large;
-                font-weight: bold;
-                border: 2px solid;
-                color: white;
-                background-color: #21d19c;
-                cursor: pointer;
-                border-radius: 60px;
-            }
-    
+    .col-3 {
+        width: 25%;
+    }
 
-            .footer .box-container {
-                float: left;
-            }
+    .col-4 {
+        width: 33.33%;
+    }
 
-            .footer .box-container .box h3 {
-                justify-content: center;
-            }
+    .col-5 {
+        width: 41.66%;
+    }
 
-            .signup-form button:hover {
-                background-color: whitesmoke;
-                color: black;
-            }
-            .topnav a {
-                font-size: 50px;
-            } 
-        }
+    .col-6 {
+        width: 50%;
+    }
 
-        @media(max-width: 768px) {
-            html {
-                font-size: 50%;
-            }
+    .col-7 {
+        width: 58.33%;
+    }
 
-            header .topnav {
-                position: fixed;
-                top: -120;
-                left: 0;
-                width: 100%;
-                background: white;
-                opacity: 0;
-            }
+    .col-8 {
+        width: 66.66%;
+    }
 
-            header .topnav a {
-                font-size: 2.5rem;
-                color: black;
-                display: block;
-                margin: 1rem 0;
-            }
+    .col-9 {
+        width: 75%;
+    }
 
-            header .topnav a::before {
-                background-color: #03a57498;
-            }
+    .col-10 {
+        width: 83.33%;
+    }
 
-            .welcome-intro h3,
-            p {
-                text-align: center;
-            }
+    .col-11 {
+        width: 91.66%;
+    }
 
-            .signup-form {
-                width: 40rem;
-                /* width: 35rem; */
-/* padding: 20px;
-                border: 2px solid #21d19c;
-                margin-top: auto;
-                margin-bottom: 10vh;
-                float: left;
-                border-radius: 20px;
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            }
-            .signup-form button {
-                width: 30%;
-                margin-left: 0px;
-                padding: 10px;
-                font-size: large;
-                font-weight: bold;
-                border: 2px solid;
-                color: white;
-                background-color: #21d19c;
-                cursor: pointer;
-                border-radius: 60px;
-            }
-    
-            .footer .box-container {
-                float: left;
-            }
-
-            .footer .box-container .box h3 {
-                justify-content: center;
-            }
-
-            .signup-form button:hover {
-                background-color: whitesmoke;
-                color: black;
-            }
-
-        @media(max-width: 992px){
-            html {
-                font-size: 60%;
-            }
-
-            header .topnav {
-                position: fixed;
-                top: -120;
-                left: 0;
-                width: 100%;
-                background: white;
-                opacity: 0;
-            }
-
-            header .topnav a {
-                font-size: 2.5rem;
-                color: black;
-                display: block;
-                margin: 1rem 0;
-            }
-
-            header .topnav a::before {
-                background-color: #03a57498;
-            }
-
-            .welcome-intro h3,
-            p {
-                text-align: center;
-            }
-
-            .signup-form {
-                width: 35rem;
-                padding: 20px;
-                border: 2px solid #21d19c;
-                margin-top: auto;
-                margin-bottom: 10vh;
-                float: left;
-                border-radius: 20px;
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            }
-    
-
-            .footer .box-container {
-                float: left;
-            }
-
-            .footer .box-container .box h3 {
-                justify-content: center;
-            }
-
-            .signup-form button:hover {
-                background-color: whitesmoke;
-                color: black;
-            }
-        }
-
-        @media screen and (max-width: 1200px){
-            .signup-form {
-                width: ;
-                width: 35rem;
-                padding: 20px;
-                border: 2px solid #21d19c;
-                margin-top: auto;
-                margin-bottom: 10vh;
-                float: left;
-                border-radius: 20px;
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            }
-        }
-
-        @media screen and (landscapre){
-
-        }*/
+    .col-12 {
+        width: 100%;
+    }
+}
 
 /* MEDIA QUERY DISPLAY ENDS */
 
